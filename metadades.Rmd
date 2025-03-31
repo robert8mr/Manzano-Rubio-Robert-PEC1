@@ -1,0 +1,32 @@
+---
+title: "metadades"
+author: "Robert Manzano Rubio"
+date: "2025-03-31"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+Les dades provenen de Metabolomics Workbench, de l'estudi ST000724 sobre canvis relacionats amb l'edat dels esquirols vermells americans, el qual conté dues anàlisis: fase revertida amb ionització positiva i fase revertida amb ionització negativa. Les unitats són peak area.
+
+```{r}
+library(BiocManager)
+library(metabolomicsWorkbenchR)
+library(SummarizedExperiment)
+
+SE<-do_query(
+    context = 'study',
+    input_item = 'study_id',
+    input_value = 'ST000724',
+    output_item = 'SummarizedExperiment' # or 'DatasetExperiment'
+    )
+
+SE1<-SE$AN001134
+SE2<-SE$AN001135
+metadata(SE1)
+metadata(SE2)
+```
+
