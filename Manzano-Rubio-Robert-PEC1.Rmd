@@ -243,4 +243,4 @@ L'anàlisi realitzat correspon a una exploració bàsica de les dades de l'estud
 
 # Referències
 
-link a repositori GitHub
+https://github.com/robert8mr/Manzano-Rubio-Robert-PEC1
